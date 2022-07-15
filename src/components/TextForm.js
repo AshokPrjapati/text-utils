@@ -30,20 +30,20 @@ export default function TextForm(props) {
   return (
     <><div>
       <div className="mb-3">
-        <label htmlFor="myBox" className="form-label"><h2>{props.heading}</h2></label>
-        <textarea className="form-control" id="myBox" rows="8" placeholder="Enter your text here" value={text} onChange={handleOnChange}></textarea>
+        <label htmlFor="myBox" className="form-label"><h2 style={{color:props.mode==="dark"?"white":"black"}}>{props.heading}</h2></label>
+        <textarea className="form-control" id="myBox" rows="8" placeholder="Enter your text here" value={text} onChange={handleOnChange} style={{backgroundColor: props.mode==="dark"?"grey":"white",color:props.mode==="dark"?"white":"black" }}></textarea>
       </div>
       <button className="btn btn-primary mx-1 my-1" onClick={handleUPClick}>Convert to Uppercase</button>
       <button className="btn btn-primary mx-1 my-1" onClick={handleLoClick}>Convert to Lowercase</button>
       <button className="btn btn-primary mx-1 my-1" onClick={handleClearClick}>Clear text</button>
       <button className="btn btn-primary mx-1 my-1" onClick={handleCopyClick}>Copy text</button>
       </div>
-      <div>
+      <div style={{color:props.mode==="dark"?"white":"black"}}>
         <h2 className='my-3'>Your text summary</h2>
         <p>{text.split(" ").length-1} Words and {text.length} Characters</p>
         <p>{0.008*`${text.split(" ").length-1}`} Minute for read</p>
         <h3>Preview</h3>
-        {/* <p>{text.length>0?text:"Enter Somthing in text-box to preview"}</p> */}
+        <p>{text.length>0?text:"Enter Somthing in text-box to preview"}</p>
       </div>
     </>
   )
