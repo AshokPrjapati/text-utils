@@ -1,0 +1,28 @@
+.darkThemes{
+    display: flex;
+    margin-bottom: 0;
+}
+.darkThemes li{
+    list-style: none;
+    cursor: pointer;
+}
+.darkThemes li{
+    margin: 5px;
+    width: 35px;
+    height: 35px;
+    background-color: blue;
+    border-radius: 50%;
+}
+
+#red{
+    background-color: rgb(86, 28, 28);
+}
+#blue{
+    background-color: rgb(21, 60, 91);
+}
+#yellow{
+    background-color: rgb(101, 103, 10);
+}
+#green{
+    background-color: rgb(8, 90, 12);
+}
